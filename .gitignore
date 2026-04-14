@@ -1,5 +1,8 @@
-# Maven build folder
+# Maven target folder
 /target/
+
+# Compiled files
+/bin/
 
 # Eclipse files
 .classpath
@@ -11,7 +14,3 @@
 
 # OS files
 .DS_Store
-Thumbs.db
-
-# Temporary files
-*.tmp
