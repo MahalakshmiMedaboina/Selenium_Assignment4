@@ -64,6 +64,8 @@ public class Test1 {
                 new URL("http://127.0.0.1:4444"),
                 options
         );
+        
+        System.out.println("Webhook test");
 
         // Parameterized URL from Jenkins
         String url = System.getProperty("URL", "https://www.google.com");
