@@ -1,42 +1,39 @@
-package CDP;
+package main.java.CDPDemo;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class CDPExample {
+public class MobileEmulationExample {
 
     public static void main(String[] args) {
 
-        // ✅ Set ChromeDriver path
         System.setProperty("webdriver.chrome.driver",
                 "C:\\ChromeDriver121\\chromedriver-win64\\chromedriver.exe");
 
-        // ✅ Set Chrome binary (portable Chrome 121)
         ChromeOptions options = new ChromeOptions();
         options.setBinary("C:\\Chrome121\\chrome-win64\\chrome.exe");
 
-        options.addArguments("--disable-gpu");
-        options.addArguments("--window-size=1920,1080");
+        // ✅ Set mobile device
+        Map<String, String> mobileEmulation = new HashMap<>();
+        mobileEmulation.put("deviceName", "iPhone X");
 
-        System.out.println("STARTING TEST...");
+        options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
-        // ✅ Launch browser
         WebDriver driver = new ChromeDriver(options);
 
-        System.out.println("BROWSER LAUNCHED");
+        driver.get("https://www.amazon.com");
 
-        // ✅ Open website
-        driver.get("https://www.google.com");
+        System.out.println("Mobile view opened");
 
-        // Wait to observe browser
         try {
             Thread.sleep(5000);
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
-        // ✅ Close browser
         driver.quit();
     }
 }

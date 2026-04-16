@@ -1,13 +1,10 @@
-package CDP;
-
-import java.util.HashMap;
-import java.util.Map;
+package main.java.CDPDemo;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class MobileEmulationExample {
+public class BlockRequestsExample {
 
     public static void main(String[] args) {
 
@@ -17,17 +14,14 @@ public class MobileEmulationExample {
         ChromeOptions options = new ChromeOptions();
         options.setBinary("C:\\Chrome121\\chrome-win64\\chrome.exe");
 
-        // ✅ Set mobile device
-        Map<String, String> mobileEmulation = new HashMap<>();
-        mobileEmulation.put("deviceName", "iPhone X");
-
-        options.setExperimentalOption("mobileEmulation", mobileEmulation);
+        // ✅ Block images
+        options.addArguments("--blink-settings=imagesEnabled=false");
 
         WebDriver driver = new ChromeDriver(options);
 
         driver.get("https://www.amazon.com");
 
-        System.out.println("Mobile view opened");
+        System.out.println("Page loaded without images");
 
         try {
             Thread.sleep(5000);

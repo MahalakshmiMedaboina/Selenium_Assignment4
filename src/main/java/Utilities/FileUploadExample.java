@@ -1,4 +1,4 @@
-package utilities;
+package main.java.Utilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

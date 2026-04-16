@@ -1,4 +1,4 @@
-package api;
+package main.java.apiDemo;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

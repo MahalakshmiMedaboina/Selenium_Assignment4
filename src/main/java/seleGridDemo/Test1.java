@@ -30,7 +30,7 @@
 
 //-------------------------------------------------------------
 
-package gridDemo;
+package main.java.seleGridDemo;
 
 
 import java.net.URL;

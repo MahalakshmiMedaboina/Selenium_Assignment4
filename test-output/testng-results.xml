@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-13T23:31:23 IST" name="ParallelSuite" finished-at="2026-04-13T23:31:31 IST" duration-ms="7730">
+  <suite started-at="2026-04-16T11:53:52 IST" name="Default suite" finished-at="2026-04-16T11:53:52 IST" duration-ms="249">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:test.java.runner.TestRunner@c0c2f8d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-04-13T23:31:23 IST" name="Test2" finished-at="2026-04-13T23:31:30 IST" duration-ms="7373">
-      <class name="gridDemo.Test2">
-        <test-method signature="testBing()[pri:0, instance:gridDemo.Test2@3d285d7e]" started-at="2026-04-13T23:31:23 IST" name="testBing" finished-at="2026-04-13T23:31:30 IST" duration-ms="7335" status="PASS">
+    <test started-at="2026-04-16T11:53:52 IST" name="Default test" finished-at="2026-04-16T11:53:52 IST" duration-ms="249">
+      <class name="test.java.runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:test.java.runner.TestRunner@c0c2f8d]" started-at="2026-04-16T11:53:52 IST" name="setUpClass" finished-at="2026-04-16T11:53:52 IST" duration-ms="137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@fc258b1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testBing -->
-      </class> <!-- gridDemo.Test2 -->
-    </test> <!-- Test2 -->
-    <test started-at="2026-04-13T23:31:23 IST" name="Test1" finished-at="2026-04-13T23:31:31 IST" duration-ms="7730">
-      <class name="gridDemo.Test1">
-        <test-method signature="testGoogle()[pri:0, instance:gridDemo.Test1@73a1e9a9]" started-at="2026-04-13T23:31:23 IST" name="testGoogle" finished-at="2026-04-13T23:31:31 IST" duration-ms="7694" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:test.java.runner.TestRunner@c0c2f8d]" started-at="2026-04-16T11:53:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-16T11:53:52 IST" duration-ms="68" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Valid login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login functionality"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGoogle -->
-      </class> <!-- gridDemo.Test1 -->
-    </test> <!-- Test1 -->
-  </suite> <!-- ParallelSuite -->
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:test.java.runner.TestRunner@c0c2f8d]" started-at="2026-04-16T11:53:52 IST" name="tearDownClass" finished-at="2026-04-16T11:53:52 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- test.java.runner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
